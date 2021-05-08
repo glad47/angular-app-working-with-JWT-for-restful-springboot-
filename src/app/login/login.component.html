@@ -1,0 +1,49 @@
+<app-cloud-title>Sign in to Taco Cloud</app-cloud-title>
+
+<p style="font-weight: bold; color: red;">
+  The sign in and security features of this version of Taco Cloud are not
+  yet implemented. The forms presented below do absolutely nothing...yet.
+  Stay tuned.
+</p>
+
+<app-group-box title="Sign in">
+  <form (ngSubmit)="onLogin()">
+    <label for="username"><b>Username:</b></label><br/>
+    <input type="text" [(ngModel)]="login.username" name="username" class="formField"/><br/>
+    <label for="password"><b>Password:</b></label><br/>
+    <input type="password" [(ngModel)]="login.password" name="password" class="formField"/><br/><br/>
+    <app-big-button label="Sign in"></app-big-button>
+  </form>
+</app-group-box>
+
+<app-group-box title="Register">
+  <form (ngSubmit)="onSubmit()">
+    <label for="username"><b>Username:</b></label><br/>
+    <input type="text" [(ngModel)]="register.username" name="username" class="formField"/><br/>
+    <label for="password"><b>Password:</b></label><br/>
+    <input type="password" [(ngModel)]="register.password" name="password" class="formField"/><br/><br/>
+    <label for="password"><b>(verify password)</b></label><br/>
+    <input type="password" [(ngModel)]="register.confirm" name="confirm" class="formField"/><br/><br/>
+
+    <label for="fullName"><b>Full name:</b></label><br/>
+    <input type="text" [(ngModel)]="register.fullName" name="fullName" class="formField"/><br/><br/>
+
+    <label for="street"><b>Street:</b></label><br/>
+    <input type="text" [(ngModel)]="register.street" name="street" class="formField"/><br/><br/>
+
+    <label for="city"><b>City / State:</b></label><br/>
+    <input type="text" [(ngModel)]="register.city" name="city" class="formField"/>
+    <input type="text" [(ngModel)]="register.state" name="state" class="formField"/>
+    <br/><br/>
+
+    <label for="zip"><b>Zip code:</b></label><br/>
+    <input type="text" [(ngModel)]="register.zip" size="2" name="zip" class="formField"/><br/><br/>
+
+    <label for="phone"><b>Phone number:</b></label><br/>
+    <input type="text" [(ngModel)]="register.phone" name="phone" class="formField"/><br/><br/>
+
+
+    <app-big-button label="Register"></app-big-button>
+  </form>
+</app-group-box>
+
